@@ -1,11 +1,12 @@
 // Code CoordinatesButton Component Here
 
-import React from 'react';
+import React, {Component} from 'react';
 
 export default class CoordinatesButton extends Component {
  
     findCoordinates = (event) => {
-        const [X,Y] = (event.clientX,event.clientY)
+        const coordinates = ["X","Y"]
+        ["X","Y"] = (event.clientX,event.clientY)
     }
 
     render(){
@@ -13,6 +14,7 @@ export default class CoordinatesButton extends Component {
             <div>
                 {this.props.onReceiveCoordinates}
                 <button type="submit" onClick={this.findCoordinates} />
+                {this.onReceiveCoordinates}
             </div>
         )
     }
