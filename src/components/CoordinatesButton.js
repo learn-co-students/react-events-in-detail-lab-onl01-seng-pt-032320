@@ -5,16 +5,18 @@ import React, {Component} from 'react';
 export default class CoordinatesButton extends Component {
  
     findCoordinates = (event) => {
-        const coordinates = ["X","Y"]
-        ["X","Y"] = (event.clientX,event.clientY)
+        const coordinates = [event.clientX,event.clientY]
+        let X = coordinates[0]
+        let Y = coordinates[1]
     }
+
+   
 
     render(){
         return(
             <div>
-                {this.props.onReceiveCoordinates}
+                {this.props.onReceiveCoordinates({this.findCoordinates})} 
                 <button type="submit" onClick={this.findCoordinates} />
-                {this.onReceiveCoordinates}
             </div>
         )
     }
