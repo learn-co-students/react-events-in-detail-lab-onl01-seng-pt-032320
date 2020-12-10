@@ -15,7 +15,7 @@ export default class CoordinatesButton extends Component {
     render(){
         return(
             <div>
-                {this.props.onReceiveCoordinates({this.findCoordinates})} 
+                {this.props.onReceiveCoordinates()} 
                 <button type="submit" onClick={this.findCoordinates} />
             </div>
         )
